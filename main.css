@@ -1,0 +1,61 @@
+*{    margin: 0;    padding: 0;    transition: .2s ease-in-out;}
+@font-face {    font-family:Tanha ;    src: url(fonts/eot/Tanha-FD.eot),
+    url(fonts/ttf/Tanha-FD.eot),    url(fonts/woff/Tanha-FD.woff),
+    url(fonts/woff2/Tanha-FD.woff2);
+}
+@font-face {    font-family:Vazir ;    src: url(fonts/eot/Vazir-Bold.eot),
+    url(fonts/ttf/Vazir-Bold.ttf),    url(fonts/woff/Vazir-Bold.woff),
+    url(fonts/woff2/Vazir-Bold.woff2);
+}
+:root{    --font-primatry:Tanha;    --font-secondary:Vazir;    --color-primary:#7322a6;
+    --color-primary-dark:#08001b;    --color-black:#000;    --color-white:#fff;
+}
+body{    width: 100%;    font-family: var(--font-secondary);
+     background-color: var(--color-primary-dark); color: white;
+    }
+header{ height: 70px; width: 100%;   display: flex;  justify-content: space-between;}
+header nav{width: 100%;    display: flex;    align-items: center; margin-top: 30px;
+        justify-content: space-between;}
+header nav .logo{    width: 100px;overflow: hidden; margin-left: 20px;}
+header nav .logo img{    width: 100%;}
+header nav ul{    display: flex;    justify-content: space-around;    list-style: none;}
+header nav ul li{    margin-right: 40px;    font-family: var(--font-primatry);
+    padding: 5px 10px;    position: relative;
+}
+main{    width: 100%;}
+.LandingPage{width: 100%;    height: 100vh;    display: flex;    flex-direction: column;
+    justify-content: space-between;    align-items: center;    position: absolute;
+    top: 0;    z-index: -1;
+}
+.LandingPage .img-content{    display: flex;    height: 100%;    justify-content: center;
+    width: 100%;    z-index: 0;     overflow: hidden;
+}
+.LandingPage .img-content::before{    content: '';    position: absolute;    width: 100%;
+    height: 100%;    background-color: rgba(0,0,0,.5);
+}
+.LandingPage .img-content img{   height: 100%; width: 100%;}
+.LandingPage .content{    display: flex;    flex-direction: row;    z-index: 1;
+    justify-content: space-between;    width: 90%;    height: 70%;    position: absolute;
+    bottom: 10px;
+}
+.LandingPage .content .right,.LandingPage .content .left{   display: flex;
+    flex-direction: column; justify-content: space-between; height: 100%;
+}
+.LandingPage .content .left .top ul{    list-style: none;   }
+.LandingPage .content .left .top h3{    margin-bottom: 40px;    }
+.LandingPage .content .left .top ul li{    margin-bottom: 20px;    position: relative;}
+.LandingPage .content .left .top ul li::before{    content: '';    position: absolute;
+    width: 10px;    height: 10px;    top: 15px;    right: -30px;    border-radius: 100%;
+    background-color: var(--color-primary);
+    filter: drop-shadow(0px 0px 5px rgb(166, 0, 255));
+}
+.LandingPage .content .left .top ul li h4{    font-weight: bold;}
+.LandingPage .content .left .top ul li p{    color:rgb(223 135 188);    font-size: 10pt;
+    font-weight: normal;
+}
+.LandingPage .content .left .bottom ul{    display: flex;    list-style: none;}
+.LandingPage .content .left .bottom ul LI{    margin: 0 15px;}
+.LandingPage .content .right .top h1{    margin-bottom: 20px;    font-size: 30pt;}
+.LandingPage .content .right .top button{    margin-top: 40px;    padding: 10px 20px;
+    color: var(--color-primary);    font-weight: bold;
+}
